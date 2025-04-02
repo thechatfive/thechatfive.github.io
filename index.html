@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TheChatFive</title>
+    <link rel="manifest" href="manifest.json">
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+        }
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <iframe src="https://f6b53579-7848-4e80-939a-feedd87a4d0d-00-14rtt2f1le7pd.janeway.replit.dev/"></iframe>
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/sw.js').then(() => {
+                console.log('Service Worker registrado');
+            }).catch(error => {
+                console.error('Error registrando Service Worker', error);
+            });
+        }
+    </script>
+</body>
+</html>
